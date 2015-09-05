@@ -63,11 +63,11 @@ module.exports.connections = {
   MongoCrmdb: {
     url: process.env.MONGOLAB_URI,
     adapter: 'sails-mongo',
-    //host: 'localhost',
-    //port: 27017
-    //user: 'galgomedia',
-    //password: 'GALGOmed215',
-    //database: 'gedoc'
+    //host: 'ds035533.mongolab.com',
+    //port: 35533,
+    //user: 'paperstore',
+    //password: 'abq47bp2',
+    //database: 'paperstore'
   },
   /*MongoCrmdb: {
     adapter: 'sails-mongo',
