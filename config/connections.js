@@ -57,14 +57,26 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
+  //mongodb://heroku_sz7f2lxh:2ot11g87btd61ktk6r1to63sqe@ds035673.mongolab.com:35673/heroku_sz7f2lxh
+  //mongodb://paperstore:abq47bp2@ds035533.mongolab.com:35533/paperstore
+  //$mongo ds035533.mongolab.com:35533/paperstore -u paperstore -p abq47bp2
   MongoCrmdb: {
+    url: process.env.MONGOLAB_URI,
+    adapter: 'sails-mongo',
+    //host: 'localhost',
+    //port: 27017
+    //user: 'galgomedia',
+    //password: 'GALGOmed215',
+    //database: 'gedoc'
+  },
+  /*MongoCrmdb: {
     adapter: 'sails-mongo',
     host: 'localhost',
     port: 27017,
     user: '',
     password: '',
     database: 'crm'
-  },
+  },*/
 
   /***************************************************************************
   *                                                                          *
