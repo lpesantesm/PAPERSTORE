@@ -1,0 +1,50 @@
+<div class="login-container animated fadeInDown" ng-app="appFRAMEWORK" ng-controller="HomeController">
+  <div class="loginbox bg-white">
+    <div class="loginbox-title"><%= i18n('INICIO DE SESION') %></div>
+    <!--div class="loginbox-social">
+      <div class="social-title ">Connect with Your Social Accounts</div>
+      <div class="social-buttons">
+        <a class="button-facebook" href="#">
+          <i class="social-icon fa fa-facebook"></i>
+        </a>
+        <a class="button-twitter" href="#">
+          <i class="social-icon fa fa-twitter"></i>
+        </a>
+        <a class="button-google" href="#">
+          <i class="social-icon fa fa-google-plus"></i>
+        </a>
+      </div>
+    </div>-->
+    <div class="loginbox-or">
+      <div class="or-line"></div>
+      <!--<div class="or">OR</div>-->
+    </div>
+    <div class="loginbox-textbox">
+      <!--<input class="form-control" placeholder="<%= i18n('Usuario') %>" type="text" ng-model="loginForm.usuario"/>-->
+      <input class="form-control" placeholder="<%= i18n('Usuario') %>" type="text" />
+    </div>
+    <div class="loginbox-textbox">
+      <!--<input class="form-control" placeholder="<%= i18n('Contraseña') %>" type="password" ng-model="loginForm.password"/>-->
+      <input class="form-control" placeholder="<%= i18n('Contraseña') %>" type="password" />
+    </div>
+    <!--<div class="loginbox-forgot">
+      <a href="#">Forgot Password?</a>
+    </div>-->
+    <div class="loginbox-submit">
+      <!--<input class="btn btn-primary btn-block" type="button" value="<%= i18n('Ingresar') %>">-->
+
+        <!--<button class="btn btn-primary btn-block" ng-disabled="loginForm.loading" type="submit" ng-click="submitLoginForm()">-->
+        <!--<span ng-show="!loginForm.loading"><%= i18n('Entrar') %></span>-->
+        <!--<span ng-show="loginForm.loading"><%= i18n('Entrando..') %></span>-->
+        <!--</button>-->
+
+        <button class="btn btn-primary btn-block" type="submit" >
+          <span ><%= i18n('Entrar') %></span>
+          <span ><%= i18n('Entrando..') %></span>
+        </button>
+
+
+    </div>
+  </div>
+  <div class="logobox"></div>
+</div>

@@ -1,0 +1,217 @@
+
+<br>
+<br>
+<!--"TextoAController"-->
+<form name="prospectoForm" >
+<div class="container" ng-controller= "TextoAController"  >
+
+
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      Ingreso de Cliente: {{ENTIDAD}}
+    </div>
+    <div class="panel-footer">
+
+      <table class="table table-hover">
+        <tr>
+          <td colspan="5"><span class="label label-primary">Datos Personales</span></td>
+        </tr>
+        <tr>
+          <td>Primer Apellido:</td>
+          <td>
+            <input type="text" name="primerApellido" ng-model="prospecto.primerApellido" ng-maxlength="20" ng-minlength="3" ng-required="requeridoPrimerApellido" ng-pattern="patternPrimerApellido" >
+            <span ng-show="prospectoForm.primerApellido.$error.maxlength">El tamaño m&aacute;ximo debe ser 20</span>
+            <span ng-show="prospectoForm.primerApellido.$error.required">El campo es requerido</span>
+
+          </td>
+
+          <td>  </td>
+          <td>Primer Nombres:</td>
+          <td><input type="text" name="primerNombre" ng-model="prospecto.primerNombre" ></td>
+        </tr>
+        <tr>
+          <td>Segundo Apellido:</td>
+          <td><input type="text" name="segundoApellido" ng-model="prospecto.segundoApellido" ></td>
+          <td>  </td>
+          <td>Segundo Nombres:</td>
+          <td><input type="text" name="segundoNombre" ng-model="prospecto.segundoNombre" ></td>
+        </tr>
+        <tr>
+          <td>Genero:</td>
+          <td>  <select class="combobox" ng-model="prospecto.genero">
+                  <option value="MASCULINO">MASCULINO</option>
+                  <option value="FEMENINO">FEMENINO</option>
+                </select>
+          </td>
+          <td>  </td>
+          <td>
+        </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Fecha Nacimiento:</td>
+          <td>
+              <input type="date" id="FechaNacimiento" name="input" placeholder="yyyy-MM-dd"  ng-model="prospecto.fechaNacimiento" ng-Change="CalculaEdad()">
+          </td>
+          <td>
+
+          </td>
+          <td>Edad:</td>
+          <td> <input ng-model="prospecto.edad" > </td>
+        </tr>
+        <tr>
+          <td>Tipo de Documento:</td>
+          <td >
+             <select class="combobox" ng-model="prospecto.tipDocumento">
+                  <option value="CEDULA IDENTIDAD" selected>CEDULA IDENTIDAD</option>
+                  <option value="RUC">RUC</option>
+                  <option value="PASAPORTE">PASAPORTE</option>
+                  <option value="OTROS">OTROS</option>
+                </select>
+          </td>
+          <td>  </td>
+          <td>No. de Documento:</td>
+          <td><input ng-model="prospecto.numDocumento" ></td>
+        </tr>
+        <tr>
+          <td>E-mail:</td>
+          <td><input ng-model="prospecto.email" ></td>
+          <td>  </td>
+          <td>Celular:</td>
+          <td><input ng-model="prospecto.movilPrincipal" ></td>
+        </tr>
+
+        <tr>
+          <td colspan="5"><span class="label label-success">Datos Domicilio</span></td>
+        </tr>
+        <tr>
+          <td>Provincia:</td>
+          <td><input ng-model="prospecto.provinciaDomicilio" ></td>
+          <td>  </td>
+          <td>Parroquia:</td>
+          <td><input ng-model="prospecto.parroquiaDomicilio" ></td>
+        </tr>
+
+        <tr>
+          <td>Canton:</td>
+          <td><input ng-model="prospecto.cantonDomicilio" ></td>
+          <td>  </td>
+          <td>Direccion:</td>
+          <td><input ng-model="prospecto.direccionDomicilio" ></td>
+        </tr>
+
+
+        <tr>
+          <td>Telefono:</td>
+          <td><input ng-model="prospecto.telefonoDomicilio" ></td>
+          <td>  </td>
+          <td>Referencia Adicional:</td>
+          <td>
+
+          <!--  <p>Selected: {{person.selected}}</p> -->
+          <!--  <ui-select ng-model="person.selected"  theme="select2" ng-disabled="disabled" style="min-width: 300px;"> -->
+          <!--    <ui-select-match placeholder="Select a person in the list or search his name/age...">{{$select.selected.name}}</ui-select-match> -->
+          <!--    <ui-select-choices repeat="person in people | propsFilter: {name: $select.search, age: $select.search}"> -->
+          <!--      <div ng-bind-html="person.name | highlight: $select.search"></div> -->
+          <!--      <small> -->
+          <!--        email: {{person.email}} -->
+          <!--        age: <span ng-bind-html="''+person.age | highlight: $select.search"></span> -->
+          <!--      </small> -->
+          <!--    </ui-select-choices> -->
+          <!--  </ui-select> -->
+
+
+          <!--<div class="container" ng-controller="DemoCtrl"> -->
+          <!--      <div class="row" id="exSelects"> -->
+          <!--        <div class="col-sm-6"> -->
+          <!--          <h4>Select with Search Filter</h4> -->
+          <!--          <select id="mySel" class="form-control"> -->
+          <!--            <option ng-repeat="person in people" ng-selected="person.selected" ng-model="person.name">{{person.name}}</option> -->
+          <!--          </select> -->
+          <!--        </div><!--/col-->
+          <!--      </div><!--/row-->
+
+
+              <div class="col-sm-6" ng-controller="DemoCtrl" >
+                          <ui-select name="persona" ng-disabled="disabled"  ng-model="person.selected" style="min-width: 100px;" theme="bootstrap">
+                            <ui-select-match placeholder="Select a person">{{$select.selected.name}}</ui-select-match>
+                            <ui-select-choices repeat="person in people | propsFilter: {name: $select.search, age: $select.search}">
+                              <div ng-bind-html="person.name | highlight: $select.search"></div>
+                            </ui-select-choices>
+                          </ui-select>
+              </div>
+
+
+          <!--  <input ng-model="prospecto.referenciaDomicilio" > -->
+          </td>
+        </tr>
+
+
+        <tr>
+          <td colspan="5"><span class="label label-info">Datos Empresa</span></td>
+        </tr>
+
+        <tr>
+          <td colspan="5"><span class="label label-warning">Datos Referido</span></td>
+        </tr>
+
+        <tr>
+          <td colspan="5"><span class="label label-default">Datos Adicionales</span></td>
+        </tr>
+
+        <tr>
+          <td>Origen del Contacto:</td>
+          <td><input ng-model="prospecto.origenContacto" ></td>
+          <td>  </td>
+          <td>Empresa de Seguro:</td>
+          <td><input ng-model="prospecto.empresaSeguro" ></td>
+        </tr>
+
+        <tr>
+          <td>Esta Afiliado IESS:</td>
+          <td><input ng-model="prospecto.afiliadoIESS" ></td>
+          <td>  </td>
+          <td>Fecha Inicio:</td>
+          <td><input ng-model="prospecto.fechaInicio" ></td>
+        </tr>
+
+
+        <tr>
+          <td colspan="5"><span class="label label-danger">Datos de Visita</span></td>
+        </tr>
+
+
+
+        <tr>
+          <td> </td>
+          <td>
+              <button ng-click="ConsultarProspecto()" class="btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span> Consultar
+              </button>
+          </td>
+
+          <td>
+              <button ng-click="GuardarProspecto()" class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span> Guardar
+              </button>
+         </td>
+         <td>
+             <button ng-click="CancelarIngresoProspecto()" class="btn btn-primary">
+               <span class="glyphicon glyphicon-repeat"></span> Cancelar
+             </button>
+         </td>
+         <td>
+            <button ng-click="CalculaEdad()" class="btn btn-primary">
+              <span class="glyphicon glyphicon-print"></span> Imprimir
+            </button>
+         </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+
+</div>
+</form>
