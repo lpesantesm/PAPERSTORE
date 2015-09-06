@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Modulo CRM</title>
+  <title>API PaperStore</title>
 
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,7 +48,7 @@
 <body ng-app="appFRAMEWORK" >
 
   <!--INICIA LA BARRA DE NAVEGACION-->
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -58,9 +58,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>-->
-        <a class="navbar-brand" href="http://www.planvital.ec/">
+        <a class="navbar-brand" >
         <!-- <img alt="Plan Vital"  src="http://localhost/EXTENSIONES/PREPAGA/themes/metronic/images/plantilla/logo.png">-->
-        <img alt="Plan Vital"  src="/images/logo_planvital.png">
+        <img alt="PaperStore"  src="/images/logoPaper.png">
         </a>
       </div>
 
@@ -70,30 +70,38 @@
           <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
 
           <li><a href="/">Inicio</a></li>
-          <li><a href="/prospectos">Prospecto</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión Prospectos<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión Ventas<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/prospectosIngreso">Ingreso</a></li>
-              <li><a href="/prospectosEdicion">Visitas</a></li>
-              <li><a href="/prospectosBusqueda">Edicion</a></li>
+              <li><a href="/facturacion">Facturación</a></li>
+              <li><a href="/cuadrecaja">Cuadre de Caja</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/prospectosReporte">Reportes</a></li>
+              <li><a href="/reporte">Reportes</a></li>
             </ul>
           </li>
 
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitas<span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión de Inventarios<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/agenda">Agenda</a></li>
-              <li><a href="/programacion">Programación</a></li>
-              <li><a href="/reportes">Reportes</a></li>
+              <li><a href="/ingreso">Ingresos</a></li>
+              <li><a href="/baja">Bajas</a></li>
+              <li><a href="/kardex">kardex</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/reasignacion">Reasignaciones</a></li>
+              <li><a href="/proveedor">Proveedores</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="/canales">Canales</a></li>
+              <li><a href="/pago">Pagos</a></li>
             </ul>
           </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión Usuario<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/usuariosistema">Usuario</a></li>
+              <li><a href="/accesosistema">Accesos</a></li>
+            </ul>
+          </li>
+
+
         </ul>
         <!--
         <form class="navbar-form navbar-left" role="search">

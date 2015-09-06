@@ -39,105 +39,44 @@ module.exports.routes = {
   }*/
 
   //PRIVATE METODOS:  Aqui se declaran los metodos basicos de cada modelo
-      //MODELO prospectos
-          'POST /prospecto/ingresar'        : 'ProspectoController.IngresarRegistroProspecto',
-          'POST /prospecto/buscar'          : 'ProspectoController.BuscarRegistroProspecto',
-          'POST /prospecto/proximo_estado'  : 'ProspectoController.BuscarEstadoProspecto',
-
-
-          'POST /prospecto/json'            : 'GestionProspectoController.GeneraJsonProspecto',
-
-          'POST /prospecto/adicionar'       : 'GestionProspectoController.IngresarProspecto',
-          'POST /prospecto/actualizaid'     : 'GestionProspectoController.ActualizaProspectoPorID',
-          'POST /prospecto/cambiaestado'    : 'GestionProspectoController.CambioEstadoProspecto',
-          'POST /prospecto/buscarid'        : 'GestionProspectoController.BuscaProspectoPorID',
-          'POST /prospecto/buscar'          : 'GestionProspectoController.BuscaProspecto',
-
-
-
-      //MODELO cliente
-           'POST /cliente/ingresar'        : 'ClienteController.IngresarRegistroCliente',
-           //'POST /cliente/buscar'          : 'ClienteController.BuscarRegistroCliente',
-           'POST /cliente/proximo_estado'  : 'ClienteController.BuscarEstadoCliente',
-
-
-           'POST /cliente/json'            : 'GestionClienteController.GeneraJsonCliente',
-
-           'POST /cliente/adicionar'       : 'GestionClienteController.IngresarCliente',
-           'POST /cliente/actualizaid'     : 'GestionClienteController.ActualizaClientePorID',
-           'POST /cliente/cambiaestado'    : 'GestionClienteController.CambioEstadoCliente',
-           'POST /cliente/buscarid'        : 'GestionClienteController.BuscaClientePorID',
-           'POST /cliente/busqueda'        : 'GestionClienteController.BuscaCliente',
-    //MODELO DEPENDIENTE
-           'POST /dependiente/ingresar'    : 'DependienteController.IngresaDependiente',
-           'POST /dependiente/actualizar'  : 'DependienteController.ActualizacionDependiente',
-           'POST /dependiente/eliminar'    : 'DependienteController.EliminaDependiente',
-
-    //MODELO COTIZACION
-           'POST /cotizacion/ingresar'    :  'CotizacionController.IngresoCotizacion',
-
-     //MODELO visista
-           'POST /visita/adicionar'       : 'GestionVisitaController.IngresarVisita',
-           'POST /visita/actualizaid'     : 'GestionVisitaController.ActualizaVisitaPorID',
-           //'POST /cliente/cambiaestado'   : 'GestionVisitaController.CambioEstadoVisita',
-           'POST /visita/buscarid'        : 'GestionVisitaController.BuscaVisitaPorID',
-           'POST /visita/busqueda'        : 'GestionVisitaController.BuscaVisita',
-
-
-//MODELO cotizacion
-        //   'POST /cotizacion/ingresar'     : 'CotizacionController.IngresaRegistroCotizacion',
-
-
-
-      //MODELO mgacrm
-           'POST /mgacrm/buscar'       : 'MgaCrmController.BuscarRegistroMGACRM',
-
-
-
-  //PUBLIC METODOS: Aqui se declaran los metodos definidos como servicio.
-
-         'POST /menuCRM/test'    : 'MenuCRMController.menuPrincipal',
+  //MODELO Usuario
+     'POST /ingreso/json'        : 'UsuarioController.GeneraJsonUsuario',
 
 
 
   //VISTAS
     '/': {
-      view: 'module_crm/index'
+      view: 'modulo_paper/index'
     },
-    '/prospectos': {
-      view: 'module_crm/crm_prospecto'
-      //controller: "PROSPECTOController", action:"listar"
+    '/facturacion': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/prospectosIngreso': {
-      view: 'module_crm/crm_prospectoIngreso'
-      //controller: "PROSPECTOController", action:"listar"
+    '/cuadrecaja': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/prospectosEdicion': {
-      view: 'module_crm/crm_prospectoEdicion'
-      //controller: "PROSPECTOController", action:"listar"
+    '/reporte': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/prospectosBusqueda': {
-      view: 'module_crm/crm_prospectoBusqueda'
-      //controller: "PROSPECTOController", action:"listar"
+    '/ingreso': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/prospectosReporte': {
-      view: 'module_crm/crm_prospectoReporte'
-      //controller: "PROSPECTOController", action:"listar"
+    '/baja': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/agenda': {
-      view: 'module_crm/crm_agenda'
+    '/kardex': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/programacion': {
-      view: 'module_crm/crm_programacion'
+    '/proveedor': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/reportes': {
-      view: 'module_crm/crm_reportes'
+    '/pago': {
+      view: 'modulo_paper/paperFacturacion'
     },
-    '/canales': {
-      view: 'module_crm/crm_canales'
+    '/usuariosistema': {
+      view: 'modulo_paper/paperUsuario'
     },
-    '/reasignacion': {
-      view: 'module_crm/crm_reasignacion'
+    '/accesosistema': {
+      view: 'modulo_paper/paperAcceso'
     }
 
 

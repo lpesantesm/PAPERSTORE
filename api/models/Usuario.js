@@ -8,38 +8,33 @@
 module.exports = {
 
   attributes: {
-    primerNombre: {   //Campo OBLIGATORIO
+    primerNombre: {
      type: 'string',
      size: 100,
-     defaultsTo: 'NO ESPECIFICADO'
+     required: true
    },
-   segundoNombre: {
-     type: 'string',
+   primerApellido: {
      size: 100,
-     defaultsTo: 'NO ESPECIFICADO'
-   },
-   primerApellido: {  //Campo OBLIGATORIO
      type: 'string',
-     size: 100,
-     defaultsTo: 'NO ESPECIFICADO'
+     required: true
    },
-   segundoApellido: {
-     type: 'string',
-     size: 100,
-     defaultsTo: 'NO ESPECIFICADO'
-   },
-   numDocumento: {
+   codigoUsuario: {
      type: 'string',
      size: 15,
-     defaultsTo: 'NO ESPECIFICADO'
+     required: true
    },
+   claveUsuario: {
+     type: 'string',
+     size: 15,
+     required: true
+   },
+   email: {
+     type: 'string',
+     size: 50,
+     required: true
+   },
+
    //--------CAMPOS DE AUDITORIA-----------------------
-          _EmpresaOwner: {  // Empresa a la que petenece el registro
-             type: "string",
-             required: true,
-             size: 45,
-             defaultsTo: "0"
-           },
           _Owner: {   //Usuario que crea el registro
             type: 'string',
             size: 45,

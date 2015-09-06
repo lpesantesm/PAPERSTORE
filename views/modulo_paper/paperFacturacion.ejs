@@ -1,0 +1,132 @@
+<br>
+<br>
+
+<div class="container" ng-controller="TextoAController">
+
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      Ingreso de Cliente {{nombreCompleto}}
+    </div>
+    <div class="panel-footer">
+
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#datosPersonales" data-toggle="tab"><span class="label label-primary">Datos Personales</span></a></li>
+              <li><a href="#domicilio" data-toggle="tab"><span class="label label-success">Datos Domicilio</span></a></li>
+              <li><a href="#empresa" data-toggle="tab"><span class="label label-info">Datos Empresa</span></a></li>
+              <li><a href="#cotizacion" data-toggle="tab"><span class="label label-warning">Datos Referido</span></a></li>
+              <li><a href="#cotizacion" data-toggle="tab"><span class="label label-warning">Datos Adicionales</span></a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="datosPersonales">
+                        <table class="table table-hover">
+                          <tr>
+                            <td>Primer Apellido:</td>
+                            <td><input ng-model="primerapellido" ></td>
+                            <td>  </td>
+                            <td>Primer Nombres:</td>
+                            <td><input ng-model="primernombre" ></td>
+                          </tr>
+                          <tr>
+                            <td>Segundo Apellido:</td>
+                            <td><input ng-model="segundoapellido" ></td>
+                            <td>  </td>
+                            <td>Segundo Nombres:</td>
+                            <td><input ng-model="segundonombre" ></td>
+                          </tr>
+                          <tr>
+                            <td>Genero:</td>
+                            <td>  <select class="combobox" ng-model="genero">
+                                    <option value="MACULINO">MASCULINO</option>
+                                    <option value="FEMENINO">FEMENINO</option>
+                                  </select>
+                            </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                          </tr>
+                          <tr>
+                            <td>Fecha Nacimiento:</td>
+                            <td>
+                              <input id="input-date" type="date" value="2014-10-31" ng-model="fechanacimiento">
+                            </td>
+                            <td>  </td>
+                            <td>Edad:</td>
+                            <td> <input ng-model="edad" > </td>
+                          </tr>
+                          <tr>
+                            <td>Tipo de Documento:</td>
+                            <td >
+                               <select class="combobox" ng-model="tipoDocumento">
+                                    <option value="CEDULA IDENTIDAD">CEDULA IDENTIDAD</option>
+                                    <option value="RUC">RUC</option>
+                                    <option value="PASAPORTE">PASAPORTE</option>
+                                    <option value="OTROS">OTROS</option>
+                                  </select>
+                            </td>
+                            <td>  </td>
+                            <td>No. de Documento:</td>
+                            <td><input ng-model="numeroDocumento" ></td>
+                          </tr>
+                          <tr>
+                            <td>E-mail:</td>
+                            <td><input ng-model="email" ></td>
+                            <td>  </td>
+                            <td>Celular:</td>
+                            <td><input ng-model="celular" ></td>
+                          </tr>
+                        </table>
+              </div>
+
+
+              <div class="tab-pane fade"  id="domicilio">
+                    <form action="/accounts/register/"
+                            method="post" role="form" class="form-horizontal">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='brGfMU16YyyG2QEcpLqhb3Zh8AvkYkJt' />
+                        <div class="form-group required"><label class="col-md-2 control-label">Username</label><div class="col-md-4"><input class="form-control" id="id_username" maxlength="30" name="username" placeholder="Username" required="required" title="" type="text" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">E-mail</label><div class="col-md-4"><input class="form-control" id="id_email" name="email" placeholder="E-mail" required="required" title="" type="email" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">Password</label><div class="col-md-4"><input class="form-control" id="id_password1" name="password1" placeholder="Password" required="required" title="" type="password" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">Password (again)</label><div class="col-md-4"><input class="form-control" id="id_password2" name="password2" placeholder="Password (again)" required="required" title="" type="password" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">first name</label><div class="col-md-4"><input class="form-control" id="id_first_name" maxlength="30" name="first_name" placeholder="first name" required="required" title="" type="text" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">last name</label><div class="col-md-4"><input class="form-control" id="id_last_name" maxlength="30" name="last_name" placeholder="last name" required="required" title="" type="text" /></div></div>
+                    <div class="form-group required"><label class="col-md-2 control-label">&#160;</label><div class="col-md-4"><div class="checkbox"><label><input class="" id="id_tos" name="tos" required="required" type="checkbox" /> I have read and agree to the Terms of Service</label></div></div></div>
+
+                        <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-star"></span> Sign Me Up!
+                          </button>
+                        </div>
+                        </div>
+                      </form>
+              </div>
+            <div class="tab-pane fade"  id="empresa"></div>
+            <div class="tab-pane fade"  id="cotizacion"></div>
+
+      </div>
+         <div>
+          <br>
+          <table>
+            <tr>
+              <td><button ng-click="GuardarProspecto()" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-ok"></span> Guardar
+                  </button>
+              </td>
+              <td> <button ng-click="ValorPorDefecto()" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-repeat"></span> Restaurar
+                  </button>
+              </td>
+              <td><button ng-click="CancelarIngresoProspecto()" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-print"></span> Imprimir
+                  </button>
+              </td>
+            </tr>
+          </table>
+          </div>
+
+
+
+    </div>
+  </div>
+
+</div>

@@ -57,9 +57,16 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  //mongodb://heroku_sz7f2lxh:2ot11g87btd61ktk6r1to63sqe@ds035673.mongolab.com:35673/heroku_sz7f2lxh
+  //CONECCION 1  DESARROLLO
   //mongodb://paperstore:abq47bp2@ds035533.mongolab.com:35533/paperstore
   //$mongo ds035533.mongolab.com:35533/paperstore -u paperstore -p abq47bp2
+
+  //CONECCION 2 PRODUCCION (HEROKU)
+  //mongodb://paper:abq47bp2@ds035633.mongolab.com/heroku_rrzt8gf5
+  //mongo ds035633.mongolab.com:35633/heroku_rrzt8gf5 -u paper -p abq47bp2
+
+
+  
   MongoCrmdb: {
     url: process.env.MONGOLAB_URI,
     adapter: 'sails-mongo',
