@@ -66,9 +66,9 @@ module.exports.connections = {
   //mongo ds035633.mongolab.com:35633/heroku_rrzt8gf5 -u paper -p abq47bp2
 
 
-  
+
   MongoCrmdb: {
-    url: process.env.MONGOLAB_URI,
+    url: process.env.MONGOLAB_URI1,
     adapter: 'sails-mongo',
     //host: 'ds035533.mongolab.com',
     //port: 35533,
